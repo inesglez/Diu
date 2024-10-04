@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="461.0" styleClass="raiz" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="botonSumar" layoutX="94.0" layoutY="35.0" mnemonicParsing="false" onAction="#sumar" prefHeight="43.0" prefWidth="53.0" stylesheets="@Estilos/ContadorPulsaciones.css" text="+">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="botonRestar" layoutX="204.0" layoutY="35.0" mnemonicParsing="false" onAction="#restar" prefHeight="43.0" prefWidth="53.0" stylesheets="@Estilos/ContadorPulsaciones.css" text="-">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button id="btCero" fx:id="botonContador" layoutX="330.0" layoutY="32.0" mnemonicParsing="false" onAction="#contador" stylesheets="@Estilos/ContadorPulsaciones.css" text="0" />
+      <Label id="lbContador" fx:id="botonNumContador" alignment="CENTER" contentDisplay="CENTER" layoutX="198.0" layoutY="106.0" prefHeight="23.0" prefWidth="66.0" stylesheets="@Estilos/ContadorPulsaciones.css" text="1">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="barraTexto" layoutX="150.0" layoutY="186.0" onAction="#reemplazar" />
+      <ProgressBar fx:id="barraProgreso" layoutX="131.0" layoutY="228.0" prefWidth="200.0" progress="0.0" />
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../resources/Estilos/ContadorPulsaciones.css" />
+      <URL value="@Estilos/ContadorPulsaciones.css" />
+   </stylesheets>
+</AnchorPane>
