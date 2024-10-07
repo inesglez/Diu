@@ -8,6 +8,12 @@
     -fx-text-fill: white;
 }
 
+#btSyR {
+    -fx-font: 22 arial;
+    -fx-base: white;
+    -fx-text-fill: black;
+}
+
 #lbContador {
     -fx-text-fill: blue;
 }

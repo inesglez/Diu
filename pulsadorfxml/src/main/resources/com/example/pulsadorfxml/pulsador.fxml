@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="426.0" prefWidth="600.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pulsadorfxml.controller.ControladorPulsador">
+    <children>
+        <Button id="bt1" fx:id="bt1" layoutX="78.0" layoutY="41.0" mnemonicParsing="false" onAction="#suma" prefHeight="65.0" prefWidth="79.0" text="+">
+            <stylesheets>
+                <URL value="@estilos/pulsador.css" />
+            </stylesheets>
+        </Button>
+        <Button id="bt2" fx:id="bt2" layoutX="193.0" layoutY="41.0" mnemonicParsing="false" onAction="#resta" prefHeight="65.0" prefWidth="79.0" stylesheets="@estilos/pulsador.css" text="-" />
+        <Button id="bt3" fx:id="bt3" layoutX="314.0" layoutY="41.0" mnemonicParsing="false" onAction="#resetea" prefHeight="65.0" prefWidth="79.0" stylesheets="@estilos/pulsador.css" text="0" />
+        <TextField id="manual" fx:id="manual" layoutX="414.0" layoutY="59.0" onAction="#ponerContador" />
+        <ProgressBar fx:id="barra" layoutX="177.0" layoutY="162.0" prefHeight="29.0" prefWidth="261.0" progress="0.0" />
+        <Label id="contador" fx:id="contador" contentDisplay="CENTER" layoutX="258.0" layoutY="235.0" prefHeight="122.0" prefWidth="93.0" stylesheets="@estilos/pulsador.css" text="0">
+            <font>
+                <Font size="80.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

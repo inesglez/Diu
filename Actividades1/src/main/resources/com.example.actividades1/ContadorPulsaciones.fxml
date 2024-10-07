@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="461.0" styleClass="raiz" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="461.0" styleClass="raiz" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.actividades1.ContadorPulsaciones3">
    <children>
-      <Button fx:id="botonSumar" layoutX="94.0" layoutY="35.0" mnemonicParsing="false" onAction="#sumar" prefHeight="43.0" prefWidth="53.0" stylesheets="@Estilos/ContadorPulsaciones.css" text="+">
+      <Button id="btSyR" fx:id="botonSumar" layoutX="94.0" layoutY="35.0" mnemonicParsing="false" onAction="#sumar" prefHeight="43.0" prefWidth="53.0" stylesheets="@Estilos/ContadorPulsaciones.css" text="+">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="botonRestar" layoutX="204.0" layoutY="35.0" mnemonicParsing="false" onAction="#restar" prefHeight="43.0" prefWidth="53.0" stylesheets="@Estilos/ContadorPulsaciones.css" text="-">
+      <Button id="btSyR" fx:id="botonRestar" layoutX="204.0" layoutY="35.0" mnemonicParsing="false" onAction="#restar" prefHeight="43.0" prefWidth="53.0" stylesheets="@Estilos/ContadorPulsaciones.css" text="-">
          <font>
             <Font size="18.0" />
          </font>
