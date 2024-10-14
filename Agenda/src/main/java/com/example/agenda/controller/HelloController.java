@@ -1,4 +1,4 @@
-package com.example.agenda;
+package com.example.agenda.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
