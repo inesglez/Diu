@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -7,15 +8,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@estilos/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conversor.HelloController">
    <children>
-      <Label layoutX="209.0" layoutY="52.0" styleClass="label-title" text="CONVERSOR DE MONEDAS">
+      <Label layoutX="165.0" layoutY="54.0" styleClass="label-title" text="CONVERSOR DE MONEDAS">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
       <Label layoutX="147.0" layoutY="108.0" styleClass="label" text="EUROS" />
       <Label layoutX="379.0" layoutY="107.0" styleClass="label" text="DÓLARES" />
-      <TextArea fx:id="eurosTextArea" layoutX="95.0" layoutY="142.0" prefHeight="33.0" prefWidth="180.0" styleClass="text-area" />
-      <TextArea fx:id="dolaresTextArea" layoutX="396.0" layoutY="142.0" prefHeight="33.0" prefWidth="180.0" styleClass="text-area" />
-      <Button fx:id="convertirButton" layoutX="275.0" layoutY="219.0" styleClass="button" text="Convertir" />
+      <Button fx:id="convertirButton" layoutX="244.0" layoutY="224.0" onAction="#boton" styleClass="button" text="Convertir" />
+      <TextField fx:id="euros" layoutX="104.0" layoutY="148.0" />
+      <TextField fx:id="dolares" layoutX="389.0" layoutY="148.0" />
    </children>
 </AnchorPane>

@@ -5,6 +5,7 @@ import Modelo.MonedaVO;
 import Modelo.repository.impl.MonedaRepositoryImpl;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -13,11 +14,18 @@ import java.util.Iterator;
 
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException, ExcepcionMoneda {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        Parent root = fxmlLoader.load();
+        HelloController controller = fxmlLoader.getController();
+        modelo modelo= new modelo();
+        MonedaRepositoryImpl monedaRepository = new MonedaRepositoryImpl();
+        modelo.setMonedaRepository(monedaRepository);
+        controller.setModelo(modelo);
+        controller.getMultiplicador();
+
         stage.setTitle("Conversor");
-        stage.setScene(scene);
+        stage.setScene(new Scene(root));
         stage.show();
     }
 
@@ -26,28 +34,6 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        try {
-            MonedaRepositoryImpl monedarepositoryImpl = new MonedaRepositoryImpl();
-            MonedaVO monedaPrueba = new MonedaVO("prueba", 1.2F);
-            monedarepositoryImpl.addMoneda(monedaPrueba);
-            System.out.println(monedarepositoryImpl.ObtenerListaMonedas().size());
-            monedarepositoryImpl.deleteMoneda(8);
-            System.out.println(monedarepositoryImpl.ObtenerListaMonedas().size());
-            monedaPrueba.setNombre("Holassssss");
-            monedaPrueba.setMultiplicador(2.0F);
-            monedaPrueba.setCodigo(22);
-            monedarepositoryImpl.editMoneda(monedaPrueba);
-            System.out.println(monedarepositoryImpl.lastId() + " last id");
-            Iterator<MonedaVO> it = monedarepositoryImpl.ObtenerListaMonedas().iterator();
-
-            while (it.hasNext()) {
-                MonedaVO mon = (MonedaVO) it.next();
-                System.out.println(mon.getCodigo() + " " + mon.getNombre() + ' ' + mon.getMultiplicador());
-            }
-        } catch (ExcepcionMoneda var5) {
-            ExcepcionMoneda e = var5;
-            System.out.println(e.imprimirMensaje());
-        }
         launch();
     }
 }
