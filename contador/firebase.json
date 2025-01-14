@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "build",
+    "site": "miprimerproyectoreact-1bdc6-5d7ad",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

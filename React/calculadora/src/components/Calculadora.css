@@ -1,0 +1,49 @@
+.panel-de-botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+  grid-template-rows: repeat(5, 1fr); /* Cinco filas */
+  grid-gap: 10px; /* Espacio entre botones */
+  max-width: 430px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado en la página */
+  padding: 10px; /* Espacio interior */
+}
+
+.boton {
+  background-color: #f0f0f0; /* Fondo de los botones */
+  border: 1px solid #ccc; /* Borde sutil */
+  padding: 20px; /* Tamaño adecuado del botón */
+  font-size: 1.8rem; /* Tamaño del texto */
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto de transición */
+  color: black; /* Texto en negro por defecto */
+}
+
+.boton--especial {
+  background-color: #ff9800; /* Fondo de color especial para botones */
+  color: white; /* El texto en los botones especiales es blanco */
+}
+
+.boton--especial:hover {
+  background-color: #ff7043; /* Cambio de color cuando pasa el mouse */
+}
+
+.boton--cero {
+  grid-column: span 2; /* El botón "0" ocupa dos columnas */
+}
+
+.pantalla {
+  background-color: #706f6f; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  font-size: 3.5rem; /* Tamaño grande para mostrar los números */
+  padding: 20px; /* Espaciado interno */
+  text-align: right; /* Alineación de los números a la derecha */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 20px; /* Espacio debajo de la pantalla */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  min-height: 60px; /* Mínima altura para asegurar espacio */
+  width: 85%; /* Ocupa todo el ancho disponible */
+  max-width: 430px; /* Coincide con el ancho de .panel-de-botones */
+  margin: 0 auto 20px auto; /* Centrado horizontal y margen inferior */
+}
